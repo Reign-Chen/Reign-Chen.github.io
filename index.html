@@ -76,7 +76,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -199,11 +199,11 @@
 
       <div class="body-wrap">
   
-    <article id="post-my-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-horse" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/29/my-first-blog/" class="article-date">
-  	<time datetime="2016-08-29T02:11:33.000Z" itemprop="datePublished">2016-08-29</time>
+      <a href="/2016/09/04/horse/" class="article-date">
+  	<time datetime="2016-09-04T09:06:13.000Z" itemprop="datePublished">2016-09-04</time>
 </a>
     </div>
   
@@ -216,7 +216,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/my-first-blog/">my first blog</a>
+      <a class="article-title" href="/2016/09/04/horse/">马年生马 - 突然想起</a>
     </h1>
   
 
@@ -225,121 +225,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
-<footer><strong>reign, baidu</strong><cite><a href="http://www.baidu.com" target="_blank" rel="external">百度</a></cite></footer></blockquote>
+        <blockquote><p>题目背景：2年前的一次面试题，当时没有写出来很囧😳,被虐的很惨。 后发奋图强，数读兵法，三十六计等，才使得现在没有被虐的很惨 ……<br>有一只母马，出生后第5年开始生育，后每一年都会生一只母马，生下的母马长到第5年又开始生一只母马。。。这样循环下去，每只母马只能生到20岁便绝育，每只母马只能活25年。问：Ｎ年后会有多少只母马? </p>
+<footer><strong>chenxueyang</strong></footer></blockquote>
+<h2 id="数组-代码沉余-好理解"><a href="#数组-代码沉余-好理解" class="headerlink" title="数组 代码沉余 好理解"></a>数组 代码沉余 好理解</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n, i, j;</div><div class="line"><span class="keyword">int</span> arr[<span class="number">40</span>];</div><div class="line">arr[<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">arr[<span class="number">1</span>] = <span class="number">1</span>;</div><div class="line">arr[<span class="number">2</span>] = <span class="number">1</span>;</div><div class="line">arr[<span class="number">3</span>] = <span class="number">1</span>;</div><div class="line">arr[<span class="number">4</span>] = <span class="number">1</span>;</div><div class="line"><span class="keyword">for</span> (n=<span class="number">5</span>; n&lt;<span class="number">30</span>; n++) &#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (n<span class="number">-20</span> &lt;= <span class="number">0</span>) i = <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> i = arr[n<span class="number">-20</span>];</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (n<span class="number">-25</span> &lt;= <span class="number">0</span>) j = <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> j = arr[n<span class="number">-25</span>];</div><div class="line"></div><div class="line">    arr[n] = arr[(n<span class="number">-1</span>) - i] + arr[n<span class="number">-4</span>] - j;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="递归代码-代码简洁-不好理解"><a href="#递归代码-代码简洁-不好理解" class="headerlink" title="递归代码 代码简洁 不好理解"></a>递归代码 代码简洁 不好理解</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getHorse</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">0</span>) </div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (n &lt; <span class="number">5</span>)</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> getHorse((n<span class="number">-1</span>)-getHorse(n<span class="number">-20</span>)) + getHorse(n<span class="number">-4</span>) - getHorse(n<span class="number">-25</span>);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
+如有不对，敬请拍砖。
+Email : bafviu502@163.com, 
+QQ : 649465952
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-drafts" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/29/drafts/" class="article-date">
-  	<time datetime="2016-08-29T02:11:33.000Z" itemprop="datePublished">2016-08-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/drafts/">my first blog</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/29/hello-world/" class="article-date">
-  	<time datetime="2016-08-29T02:05:52.000Z" itemprop="datePublished">2016-08-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
       
     </div>
