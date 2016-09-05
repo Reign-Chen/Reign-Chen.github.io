@@ -69,7 +69,7 @@
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -170,6 +170,66 @@
 
       <div class="body-wrap">
   
+    <article id="post-float" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/05/float/" class="article-date">
+  	<time datetime="2016-09-05T13:22:35.000Z" itemprop="datePublished">2016-09-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/05/float/">打印出200位的小数</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote><p>写一个程序，输入一个分数，计算出它的小数形式。无论是否可以除尽，输出最多小数点后200位。<br>形如<br>输入格式：a/b。<br>输出格式：0.xxxxxxx 的小数，小数点后最多200位。<br>输入样例:<br>16/19<br>输出：<br>0.8421052631578947368421052631578947368421……</p>
+<footer><strong>chenxueyang</strong></footer></blockquote>
+<h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight php"><figcaption><span>PHP</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dev</span><span class="params">($num1, $num2)</span> </span>&#123;</div><div class="line">    $int = [];</div><div class="line">    <span class="keyword">if</span> ($num1 &gt;= $num2) &#123;</div><div class="line">        $tmp = intval($num1 / $num2);</div><div class="line">        <span class="keyword">if</span> ($num1 % $num2 == <span class="number">0</span>) &#123;</div><div class="line">            array_push($int, $tmp);</div><div class="line">            <span class="keyword">return</span> $int;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            array_push($int, $tmp);</div><div class="line">        &#125;</div><div class="line">        array_push($int, <span class="string">'.'</span>);</div><div class="line">        $num1 = $num1-$tmp*$num2;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        array_push($int, <span class="number">0</span>);</div><div class="line">        array_push($int, <span class="string">'.'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> ($i=<span class="number">0</span>; $i&lt;<span class="number">200</span>; $i++) &#123;</div><div class="line">        <span class="keyword">if</span> ($num1 % $num2 == <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">return</span> $int;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> ($num1 &lt; $num2) &#123;</div><div class="line">            $num1 = $num1*<span class="number">10</span>;</div><div class="line">        &#125;</div><div class="line">        $tmp = intval($num1/$num2);</div><div class="line">        array_push($int, $tmp);</div><div class="line">        $num1 = $num1-$tmp*$num2;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> $int;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+如有不对，敬请拍砖。
+E-mail : bafviu502@163.com,
+QQ : 649465952 
+
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-horse" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -187,7 +247,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/04/horse/">马年生马 - 突然想起</a>
+      <a class="article-title" href="/2016/09/04/horse/">马年生马</a>
     </h1>
   
 
@@ -196,13 +256,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote><p>题目背景：2年前的一次面试题，当时没有写出来很囧😳,被虐的很惨。 后发奋图强，数读兵法，三十六计等，才使得现在没有被虐的很惨 ……<br>有一只母马，出生后第5年开始生育，后每一年都会生一只母马，生下的母马长到第5年又开始生一只母马。。。这样循环下去，每只母马只能生到20岁便绝育，每只母马只能活25年。问：Ｎ年后会有多少只母马? </p>
+        <blockquote><p>有一只母马，出生后第5年开始生育，后每一年都会生一只母马，生下的母马长到第5年又开始生一只母马。。。这样循环下去，每只母马只能生到20岁便绝育，每只母马只能活25年。问：Ｎ年后会有多少只母马? </p>
 <footer><strong>chenxueyang</strong></footer></blockquote>
-<h2 id="数组-代码沉余-好理解"><a href="#数组-代码沉余-好理解" class="headerlink" title="数组 代码沉余 好理解"></a>数组 代码沉余 好理解</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n, i, j;</div><div class="line"><span class="keyword">int</span> arr[<span class="number">40</span>];</div><div class="line">arr[<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">arr[<span class="number">1</span>] = <span class="number">1</span>;</div><div class="line">arr[<span class="number">2</span>] = <span class="number">1</span>;</div><div class="line">arr[<span class="number">3</span>] = <span class="number">1</span>;</div><div class="line">arr[<span class="number">4</span>] = <span class="number">1</span>;</div><div class="line"><span class="keyword">for</span> (n=<span class="number">5</span>; n&lt;<span class="number">30</span>; n++) &#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (n<span class="number">-20</span> &lt;= <span class="number">0</span>) i = <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> i = arr[n<span class="number">-20</span>];</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (n<span class="number">-25</span> &lt;= <span class="number">0</span>) j = <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> j = arr[n<span class="number">-25</span>];</div><div class="line"></div><div class="line">    arr[n] = arr[(n<span class="number">-1</span>) - i] + arr[n<span class="number">-4</span>] - j;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="递归代码-代码简洁-不好理解"><a href="#递归代码-代码简洁-不好理解" class="headerlink" title="递归代码 代码简洁 不好理解"></a>递归代码 代码简洁 不好理解</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getHorse</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">0</span>) </div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (n &lt; <span class="number">5</span>)</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> getHorse((n<span class="number">-1</span>)-getHorse(n<span class="number">-20</span>)) + getHorse(n<span class="number">-4</span>) - getHorse(n<span class="number">-25</span>);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="数组-代码沉余-好理解"><a href="#数组-代码沉余-好理解" class="headerlink" title="数组 代码沉余 好理解"></a>数组 代码沉余 好理解</h2><figure class="highlight c"><figcaption><span>C</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n, i, j;</div><div class="line"><span class="keyword">int</span> arr[<span class="number">40</span>];</div><div class="line">arr[<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">arr[<span class="number">1</span>] = <span class="number">1</span>;</div><div class="line">arr[<span class="number">2</span>] = <span class="number">1</span>;</div><div class="line">arr[<span class="number">3</span>] = <span class="number">1</span>;</div><div class="line">arr[<span class="number">4</span>] = <span class="number">1</span>;</div><div class="line"><span class="keyword">for</span> (n=<span class="number">5</span>; n&lt;<span class="number">30</span>; n++) &#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (n<span class="number">-20</span> &lt;= <span class="number">0</span>) i = <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> i = arr[n<span class="number">-20</span>];</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (n<span class="number">-25</span> &lt;= <span class="number">0</span>) j = <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> j = arr[n<span class="number">-25</span>];</div><div class="line"></div><div class="line">    arr[n] = arr[(n<span class="number">-1</span>) - i] + arr[n<span class="number">-4</span>] - j;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="递归代码-代码简洁-不好理解"><a href="#递归代码-代码简洁-不好理解" class="headerlink" title="递归代码 代码简洁 不好理解"></a>递归代码 代码简洁 不好理解</h2><figure class="highlight c"><figcaption><span>C</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getHorse</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">0</span>) </div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (n &lt; <span class="number">5</span>)</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> getHorse((n<span class="number">-1</span>)-getHorse(n<span class="number">-20</span>)) + getHorse(n<span class="number">-4</span>) - getHorse(n<span class="number">-25</span>);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 如有不对，敬请拍砖。
-Email : bafviu502@163.com, 
+E-mail : bafviu502@163.com, 
 QQ : 649465952
 
 
