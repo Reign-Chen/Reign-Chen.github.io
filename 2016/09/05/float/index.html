@@ -4,26 +4,26 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>打印出200位的小数 | Chenxueyang blog !</title>
+  <title>打印出200位的小数 | ChenXueYang blog !</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="写一个程序，输入一个分数，计算出它的小数形式。无论是否可以除尽，输出最多小数点后200位。形如输入格式：a/b。输出格式：0.xxxxxxx 的小数，小数点后最多200位。输入样例:16/19输出：0.8421052631578947368421052631578947368421……
-Chenxueyang
+ChenXueYang
 代码如下:PHP123456789101112131415161718192021222">
 <meta property="og:type" content="article">
 <meta property="og:title" content="打印出200位的小数">
 <meta property="og:url" content="http://yoursite.com/2016/09/05/float/index.html">
-<meta property="og:site_name" content="Chenxueyang blog !">
+<meta property="og:site_name" content="ChenXueYang blog !">
 <meta property="og:description" content="写一个程序，输入一个分数，计算出它的小数形式。无论是否可以除尽，输出最多小数点后200位。形如输入格式：a/b。输出格式：0.xxxxxxx 的小数，小数点后最多200位。输入样例:16/19输出：0.8421052631578947368421052631578947368421……
-Chenxueyang
+ChenXueYang
 代码如下:PHP123456789101112131415161718192021222">
-<meta property="og:updated_time" content="2016-09-05T13:57:20.000Z">
+<meta property="og:updated_time" content="2016-09-05T14:00:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="打印出200位的小数">
 <meta name="twitter:description" content="写一个程序，输入一个分数，计算出它的小数形式。无论是否可以除尽，输出最多小数点后200位。形如输入格式：a/b。输出格式：0.xxxxxxx 的小数，小数点后最多200位。输入样例:16/19输出：0.8421052631578947368421052631578947368421……
-Chenxueyang
+ChenXueYang
 代码如下:PHP123456789101112131415161718192021222">
   
-    <link rel="alternative" href="/atom.xml" title="Chenxueyang blog !" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="ChenXueYang blog !" type="application/atom+xml">
   
   
     <link rel="icon" href="//favicon.png">
@@ -79,7 +79,7 @@ Chenxueyang
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -212,7 +212,7 @@ Chenxueyang
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote><p>写一个程序，输入一个分数，计算出它的小数形式。无论是否可以除尽，输出最多小数点后200位。<br>形如<br>输入格式：a/b。<br>输出格式：0.xxxxxxx 的小数，小数点后最多200位。<br>输入样例:<br>16/19<br>输出：<br>0.8421052631578947368421052631578947368421……</p>
-<footer><strong>Chenxueyang</strong></footer></blockquote>
+<footer><strong>ChenXueYang</strong></footer></blockquote>
 <h2 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下:"></a>代码如下:</h2><figure class="highlight php"><figcaption><span>PHP</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dev</span><span class="params">($num1, $num2)</span> </span>&#123;</div><div class="line">    $int = [];</div><div class="line">    <span class="keyword">if</span> ($num1 &gt;= $num2) &#123;</div><div class="line">        $tmp = intval($num1 / $num2);</div><div class="line">        <span class="keyword">if</span> ($num1 % $num2 == <span class="number">0</span>) &#123;</div><div class="line">            array_push($int, $tmp);</div><div class="line">            <span class="keyword">return</span> $int;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            array_push($int, $tmp);</div><div class="line">        &#125;</div><div class="line">        array_push($int, <span class="string">'.'</span>);</div><div class="line">        $num1 = $num1-$tmp*$num2;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        array_push($int, <span class="number">0</span>);</div><div class="line">        array_push($int, <span class="string">'.'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> ($i=<span class="number">0</span>; $i&lt;<span class="number">200</span>; $i++) &#123;</div><div class="line">        <span class="keyword">if</span> ($num1 % $num2 == <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">return</span> $int;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> ($num1 &lt; $num2) &#123;</div><div class="line">            $num1 = $num1*<span class="number">10</span>;</div><div class="line">        &#125;</div><div class="line">        $tmp = intval($num1/$num2);</div><div class="line">        array_push($int, $tmp);</div><div class="line">        $num1 = $num1-$tmp*$num2;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> $int;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
 如有不对，敬请拍砖。
